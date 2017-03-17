@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "A-Dao GIF Convert",
+  "description": "A岛GIF图片自动换成原图，防止闪烁",
+  "version": "1.0",
+  "homepage_url": "https://mfweb.top/",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "activeTab",
+    "https://h.nimingban.com/"
+  ],
+
+  "content_scripts": [
+  {
+    "matches": ["https://h.nimingban.com/*"],
+    "js": ["script.js"]
+  }]
+}
