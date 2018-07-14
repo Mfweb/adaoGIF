@@ -27,7 +27,7 @@ chrome.runtime.onMessage.addListener(
 chrome.webRequest.onBeforeRequest.addListener(
 	function(details) {
 		var rcurl = details.url;
-		if(rcurl.match(/(nmbimg|tnmbstatic)\.fastmirror\.org(\/Public\/Upload)*\/thumb\//ig)) {
+		if(rcurl.match(/(nmbimg|tnmbstatic)\.fastmirror\.org(\/Public\/Upload)*\/(thumb)|(image)\//ig)) {
 			if(cdn_now){
 				rcurl = rcurl.replace("nmbimg.fastmirror.org", encodeURI("a岛.加藤惠.我爱你/adimg/?img="));
 				rcurl = rcurl.replace("http:", "https:");
@@ -36,10 +36,9 @@ chrome.webRequest.onBeforeRequest.addListener(
 			if(rcurl.match(/(\.gif)$/i)) {
 				return {redirectUrl: rcurl.replace("/thumb/","/image/")};
 			}
-			else{
-				return {redirectUrl: rcurl};
-			}
+			console.log(rcurl);
 		}
+		return {redirectUrl: rcurl};
 	},
 	{
 		urls: ["*://nmbimg.fastmirror.org/*","*://tnmbstatic.fastmirror.org/*"],
