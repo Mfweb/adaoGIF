@@ -1,10 +1,23 @@
 {
+"update_url": "https://clients2.google.com/service/update2/crx",
+
   "manifest_version": 2,
 
   "name": "A-Dao GIF Convert",
   "description": "A岛GIF图片自动换成原图，防止闪烁",
-  "version": "1.0",
+  "version": "1.3",
   "homepage_url": "https://mfweb.top/",
+
+  "permissions": [
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "*://tnmb.org/*",
+    "*://adnmb1.com/*",
+    "*://nmbimg.fastmirror.org/*",
+    "*://tnmbstatic.fastmirror.org/*"
+  ],
+
   "background": {
     "scripts": [
       "background.js"
@@ -16,14 +29,11 @@
     "default_popup": "popup.html"
   },
 
-  "permissions": [
-    "activeTab",
-    "https://h.nimingban.com/"
-  ],
 
   "content_scripts": [
   {
-    "matches": ["https://h.nimingban.com/*"],
+    "run_atstring": "document_end",
+    "matches": ["*://adnmb1.com/*","*://adnmb.com/*","*://tnmb.org/*"],
     "js": ["script.js"]
   }]
 }

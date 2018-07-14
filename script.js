@@ -1,6 +1,6 @@
 var images = document.getElementsByTagName("img");
-
-var te = /img6\.nimingban\.com\/thumb\//g;
+//http://.fastmirror.org/Public/Upload/thumb/2018-03-31/5abf11a2bca05.gif"
+var te = /(nmbimg|tnmbstatic)\.fastmirror\.org(\/Public\/Upload)*\/thumb\//g;
 var ext = /(\.gif)$/;
 var counter = 0;
 for(let i = 0;i < images.length;i++)
@@ -9,13 +9,13 @@ for(let i = 0;i < images.length;i++)
 	if(temp_img_url.match(te) && temp_img_url.match(ext))
 	{
 		counter++;
-		images[i].src = temp_img_url.replace("/thumb/","/image/");
-		images[i].onload = function(){
+		/*iimages[i].src = temp_img_url.replace("/thumb/","/image/");
+		mages[i].onload = function(){
 			if(!this.src.match(te))return;
 			var imgurl = this.src;
 			this.src = imgurl.replace("/thumb/","/image/");
-		};
-		console.log(images[i].src);
+		};*/
+		//console.log(images[i].src);
 	}
 }
 
