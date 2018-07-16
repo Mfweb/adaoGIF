@@ -5,7 +5,7 @@
 
   "name": "A-Dao GIF Convert",
   "description": "A岛GIF图片自动换成原图，防止闪烁",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "homepage_url": "https://mfweb.top/",
 
   "permissions": [
@@ -18,6 +18,9 @@
     "*://nmbimg.fastmirror.org/*",
     "*://tnmbstatic.fastmirror.org/*"
   ],
+  "icons": {
+    "48": "icon.png"
+  },
 
   "background": {
     "scripts": [
