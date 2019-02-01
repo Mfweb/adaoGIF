@@ -1,5 +1,5 @@
 var cdn_sta = false;
-window.onload=function(){
+/*window.onload=function(){
     chrome.storage.sync.get(['cdnsta'], function(result) {
         var now_cdn = result.cdnsta;
         if(now_cdn == undefined  || now_cdn == null || now_cdn == 'off'){
@@ -30,3 +30,4 @@ window.onload=function(){
         chrome.runtime.sendMessage({cdn: cdn_sta});
     });
 }
+*/

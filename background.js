@@ -40,10 +40,10 @@ chrome.webRequest.onBeforeRequest.addListener(
 	function(details) {
 		var rcurl = details.url;
 		if(rcurl.match(/(nmbimg|tnmbstatic)\.fastmirror\.org(\/Public\/Upload)*\/(thumb)|(image)\//ig)) {
-			if(cdn_now){
+			/*if(cdn_now){
 				rcurl = rcurl.replace("nmbimg.fastmirror.org", "a岛.加藤惠.我爱你/adimg/?img=");
 				rcurl = rcurl.replace("http:", "https:");
-			}
+			}*/
 			if(rcurl.match(/(\.gif)$/i)) {
 				rcurl = rcurl.replace("/thumb/","/image/");
 			}
