@@ -1,9 +1,9 @@
-var cdn_now = false;
+//var cdn_now = false;
 
 /**
  * 初始化读取CDN设置
  */
-chrome.storage.sync.get(['cdnsta'], function (result) {
+/*chrome.storage.sync.get(['cdnsta'], function (result) {
 	var now_cdn = result.cdnsta;
 	if (now_cdn == undefined || now_cdn == null || now_cdn == 'off') {
 		cdn_now = false;
@@ -11,7 +11,7 @@ chrome.storage.sync.get(['cdnsta'], function (result) {
 	else {
 		cdn_now = true;
 	}
-});
+});*/
 
 /**
  * 与前台脚本通讯
@@ -28,7 +28,8 @@ chrome.runtime.onMessage.addListener(
 			cdn_now = request.cdn;
 			console.log(cdn_now);
 		}
-	});
+	}
+);
 
 /**
  * Chrome发出网络请求之前调用

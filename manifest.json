@@ -3,7 +3,7 @@
   "manifest_version": 2,
   "name": "A-Dao GIF Convert",
   "description": "A岛GIF图片自动换成原图，防止闪烁",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "homepage_url": "https://mfweb.top/",
   "permissions": [
     "activeTab",
@@ -32,7 +32,7 @@
       "run_atstring": "document_end",
       "matches": [
         "*://adnmb2.com/*",
-        "*://adnmb2.com/*",
+        "*://adnmb3.com/*",
         "*://adnmb.com/*",
         "*://tnmb.org/*"
       ],
